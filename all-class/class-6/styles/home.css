@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1520px;
+    max-width: 79%;
+    margin: 0 auto;
+}
+
+
+/* nav style */
+
+nav {
+    background-color: rgb(218, 245, 236);
+    padding: 10px 0px 10px 0px;
+}
+
+
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav .nav_container .nav_text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav .nav_text img {
+    width: 50px;
+}
+
+
+/* ---------------- */
+
+
+nav .nav_container .nav_item {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav_container .nav_item div h5 {
+    padding: 8px;
+
+}
+
+nav .nav_container .nav_item div h5:hover {
+    background-color: rgb(247, 152, 152);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+
+/* main style */
+
+/* banner section */
+
+#banner_section {
+
+    margin: 20px 0px;
+}
+
+.banner_container {
+    /* background-image: url("../images/backgrounds/IMG-20240716-WA0100.jpg"); */
+    max-width: auto;
+    height: 650px;
+    /* background-position: center;
+   /* object-fit: cover; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, rgb(215, 152, 152), rgb(195, 195, 118), rgb(159, 159, 206));
+
+    /* background-color: aquamarine; */
+
+
+}
+
+
+.banner_container div {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+
+.banner_container div h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(77, 38, 52);
+}
+
+
+.banner_container div p {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(46, 59, 47);
+}
+
+
+.banner_container div span button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+.banner_container div span button:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+/* about_section */
+
+#about_section {
+    padding: 30px 0px;
+}
+
+#about_section .about_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+
+
+#about_section .about_container .about_1_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+
+#about_section .about_container .about_2_div img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+}
+
+
+#about_section .about_container .about_1_div button,
+#about_section .about_container .about_2_div button {
+    padding: 10px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    font-size: 18px;
+}
+
+
+/* variates_section */
+
+#variates_section {
+    padding: 30px 0px;
+}
+
+
+#variates_section .variates_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+#variates_section .variates_container * {
+    margin-bottom: 10px;
+}
+
+#variates_section .variates_container .single_card {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all .3s ease-in-out ;
+}
+
+
+#variates_section .variates_container .single_card:hover {
+    /* animation: bounce .3s ease-in-out; */
+    transform: translateY(-30px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+#variates_section .variates_container .single_card img {
+    width: 90px;
+}
+
+
+#variates_section .variates_container .single_card button {
+    padding: 8px;
+    background-color: rgb(233, 131, 163);
+    border-radius: 2px;
+
+}
+
+/* mission_vision */
+
+#mission_vision{
+    margin: 30px 0px;
+}
+
+.mission_vision_container{
+    display: flex;
+    gap: 20px;
+}
+
+.mission_vision_div_1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    background: linear-gradient(to left, rgb(215, 152, 152), rgb(195, 195, 118), rgb(159, 159, 206));
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.mission_vision_div_1 button{
+    width: 30%;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.mission_vision_div_2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    background: linear-gradient(to left, rgb(166, 152, 215), rgb(157, 217, 37), rgb(159, 159, 206));
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mission_vision_div_2 button{
+    width: 30%;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 5px;
+
+   
+}
+
+.mission_vision_div_2 button:hover, .mission_vision_div_1 button:hover{
+    background-color: darkgray;
+}
+
+/* partner_section */
+
+#partner_section{
+    margin: 30px 0;
+}
+
+
+#partner_section .partner_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#partner_section .partner_container .partner_card{
+    text-align: center;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 7px 8px 10px rgba(28, 17, 17, 0.3);
+    
+}
+
+#partner_section .partner_container .partner_card *{
+    margin-bottom: 5px;
+}
+
+
+#partner_section .partner_container .partner_card img{
+    width: 60px;
+}
+
+#partner_section .partner_container .partner_card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#partner_section .partner_container .partner_card button{
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#partner_section .partner_container .partner_card button:hover{
+    background-color: blue;
+    color: white;
+
+}
+
+/* contact_section */
+
+#contact_section{
+    margin: 30px 0;
+}
+
+
+#contact_section .contact_container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    gap: 2%;
+}
+
+
+#contact_section .contact_container .contact_section_1{
+    border: 1px solid black;
+    padding: 20px;
+    width: 39%;
+    border-radius: 5px;
+}
+
+#contact_section .contact_container .contact_section_1 .common_div_contact{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+#contact_section .contact_container .contact_section_1 button{
+    padding: 5px;
+}
+
+
+#contact_section .contact_container .contact_section_2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 59%;
+}
+
+#contact_section .contact_container .contact_section_2 div{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 7px 8px 10px rgba(28, 17, 17, 0.3);
+    background-color: azure;
+}
+
+#contact_section .contact_container .contact_section_2 div *{
+   margin-bottom: 4px;
+}
+
+
+#contact_section .contact_container .contact_section_1 *{
+    margin-bottom: 8px;
+}
+
+#contact_section .contact_container .contact_section_1 input{
+    padding: 8px;
+}
+
+
+/* footer */
+
+footer{
+    background-color: aquamarine;
+    padding: 30px 0px;
+    margin-top: 60px;
+}
+
+footer .footer_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+footer .footer_container *{
+    margin-bottom: 5px;
+}
