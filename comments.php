@@ -15,6 +15,10 @@ $city = "Dhaka"; // user current city
 $age = 24; // user     age
 
 echo $name;
+
  */
+
+//  echo 254;
+
 
 ?>
