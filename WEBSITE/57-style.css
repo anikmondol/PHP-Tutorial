@@ -1,0 +1,40 @@
+.container{
+   margin: 0px 10%;
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h3{
+    color: rgb(10, 69, 49);
+}
+
+.header ul{
+    display: flex;
+    gap: 25px;
+}
+
+.header ul li{
+    list-style: none;
+}
+
+
+.header ul li a{
+    text-decoration: none;
+}
+
+.heading{
+    color: orange;
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
