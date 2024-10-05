@@ -1,6 +1,8 @@
 <?php
 include("./61-config.php");
 
+session_start();
+
 $get_students = $conn->prepare("SELECT * FROM `students`");
 $get_students->execute();
 $students= $get_students->fetchAll();
@@ -22,6 +24,9 @@ $students= $get_students->fetchAll();
     <title>Document</title>
 </head>
 <body>
+
+
+
     <table border="1">
         <thead>
             <tr>

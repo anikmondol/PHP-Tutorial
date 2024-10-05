@@ -1,42 +1,23 @@
 <?php
 
-session_start();
-
 include("./61-config.php");
 
+if (isset($_POST['search'])) {
 
-$students = $conn->prepare("DELETE FROM `students` WHERE id='18'");
+    $search = $_POST['search'];
 
-$students->execute();
+    // $get_students = $conn->prepare("SELECT * FROM `students` where name='$search'");
 
-$student_date = $students->fetchAll();
+    $get_students = $conn->prepare("SELECT * FROM `students` where name like '%$search%'");
 
+    $get_students->execute();
 
-if (isset($_REQUEST['delete'])) {
-    $delete = $_REQUEST['delete'];
-    $students = $conn->prepare("DELETE FROM `students` WHERE id='$delete'");
-    if ($students->execute()) {
-        echo "date is delete";
-    } else {
-        echo "sorry try more";
-    }
+    $students = $get_students->fetchAll();
 }
-
-
-$get_students = $conn->prepare("SELECT * FROM `students`");
-
-$get_students->execute();
-
-$students = $get_students->fetchAll();
-
-
-
 
 
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +29,11 @@ $students = $get_students->fetchAll();
 </head>
 
 <body>
+    <form action="" method="post">
+        <input type="text" name="search" placeholder="search here...">
+        <button name="btn">Click</button>
+    </form>
+    
     <?php if (isset($_SESSION['update_done'])) :  ?>
 
         <p>
@@ -97,3 +83,35 @@ $students = $get_students->fetchAll();
 
 </html>
 
+
+<?php
+
+include("./61-config.php");
+
+if (isset($_POST['search'])) {
+
+    $search = $_POST['search'];
+
+    $get_students = $conn->prepare("SELECT * FROM `students` where name='$search'");
+
+    $get_students->execute();
+
+    $students = $get_students->fetchAll();
+}
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
